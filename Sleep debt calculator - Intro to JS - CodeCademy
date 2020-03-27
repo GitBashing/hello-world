@@ -1,0 +1,37 @@
+//Sleep debt calculator//
+
+//My solo attempt//
+
+/*calculate if you’re getting enough sleep each week using a sleep debt calculator.*/
+
+/* determine the actual and ideal hours of sleep for each night of the last week.*/
+
+/*Finally, it will calculate, in hours, how far you are from your weekly sleep goal.*/
+
+//How much sleep did I get?//
+
+let mondayNight = 9;
+let tuesdayNight = 8;
+let wednesdayNight = 9;
+let thursdayNight = 6;
+let fridayNight = 5;
+let saturdayNight = 5;
+let sundayNight = 4;
+
+let actualWeek = mondayNight + tuesdayNight + wednesdayNight + thursdayNight + fridayNight + saturdayNight + sundayNight;
+
+//How much sleep would I like?//
+let idealSleep = 9;
+let sleepTarget = 7 * idealSleep;
+
+//Do I have a sleep debt?//
+const debt = actualWeek - sleepTarget;
+
+console.log(`Your sleep debt balance for the week is ${debt}.`);
+
+
+//Following CodeCademy's advice//
+
+
+
+    
