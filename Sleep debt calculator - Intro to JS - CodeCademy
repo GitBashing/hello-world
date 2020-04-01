@@ -32,6 +32,56 @@ console.log(`Your sleep debt balance for the week is ${debt}.`);
 
 //Following CodeCademy's advice//
 
+const getSleepHours = day => {
+  if (day === 'monday') {
+   return 4.5;
+  } else if (day ==='tuesday') {
+      return 6;
+  } else if (day === 'wednesday') {
+  return 4;
+  } else if (day === 'thursday') {
+    return 8;
+  } else if (day === 'friday') {
+   return 10;
+    } else if (day === 'saturday') {
+     return 8;
+    } else if (day === 'sunday') {
+    return 8;
+    }
+};
+
+const getActualSleepHours = () => 
+getSleepHours('monday') +
+getSleepHours('tuesday') +
+getSleepHours('wednesday') +
+getSleepHours('thursday') +
+getSleepHours('thursday') +
+getSleepHours('friday') +
+getSleepHours('saturday') +
+getSleepHours('sunday');
+
+
+const getIdealSleepHours = idealHours => idealHours * 7;
+
+const calculateSleepDebt = () => {
+  let actualSleepHours = getActualSleepHours();  
+  const idealSleepHours = getIdealSleepHours(12);
+  if (actualSleepHours === idealSleepHours){
+    console.log('Well done. In total this week you slept for you ideal amount of time.')
+  } else if (actualSleepHours > idealSleepHours) {
+    console.log(`This week, you actually slept ${actualSleepHours - idealSleepHours} more than your ideal amount.`)
+    } else {
+      console.log(`Are you tired? This week you slept for ${idealSleepHours - actualSleepHours} less than your ideal amount of time.`);
+    }
+  };
+
+getIdealSleepHours();
+  calculateSleepDebt();
+
+
+
+  
+
 
 
     
